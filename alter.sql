@@ -1,0 +1,5 @@
+ALTER TABLE customer 
+    ADD CONSTRAINT fk_cdid FOREIGN KEY(cd_id) REFERENCES cd(id) ON DELETE SET NULL ; 
+
+ALTER TABLE cd 
+    ADD CONSTRAINT fk_issuedby FOREIGN KEY(issuedby) REFERENCES customer(cust_id) ON DELETE SET NULL;
